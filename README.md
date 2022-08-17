@@ -27,16 +27,16 @@
 #### Mac OS
 For the cross-compiler: `$ brew tap nativeos/i386-elf-toolchain && brew install i386-elf-binutils i386-elf-gcc`
 
-To run use `$ make qemu-mac`
+To run use `$ make run-mac`
 
 #### Unix-like
 You should not need a cross-compiler in *most* cases as the `gcc` shipped in most linux distros will support `i386` targets.
 
 [If this isn't the case for you, read here about getting a cross-compiler.](https://wiki.osdev.org/GCC_Cross-Compiler)
 
-To run use `$ make qemu-pulse`
+To run use `$ make run-sdl`
 
-If you have sound device issues, try the SDL backend for QEMU with `$ make qemu-sdl` or disable any audio devices with `$make qemu-no-audio`
+If you have sound device issues, try disable any audio devices with `$make run-no-audio`
 
 If you're having issues with no image showing up/QEMU freezing, this is a known bug with QEMU SB16 emulation under GTK. [Please read what @takaswie has written in #2 for a workaround](https://github.com/jdah/tetris-os/issues/2#issuecomment-824773889).
 
